@@ -68,7 +68,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Night Mode"
+        android:text="Light Mode"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/guideline18"
@@ -152,7 +152,7 @@
         app:layout_constraintGuide_begin="292dp" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/switchNightMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
@@ -161,7 +161,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <Switch
-        android:id="@+id/switch2"
+        android:id="@+id/switchNotifications"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
@@ -170,7 +170,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
     <Switch
-        android:id="@+id/switch3"
+        android:id="@+id/switchPrivate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
