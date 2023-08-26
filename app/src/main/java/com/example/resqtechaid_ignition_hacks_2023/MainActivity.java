@@ -20,7 +20,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
+import com.example.resqtechaid_ignition_hacks_2023.databinding.ActivityMainBinding;
 
 
 public class MainActivity extends AppCompatActivity {

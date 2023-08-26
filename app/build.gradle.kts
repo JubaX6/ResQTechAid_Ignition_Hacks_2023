@@ -6,6 +6,13 @@ android {
     namespace = "com.example.resqtechaid_ignition_hacks_2023"
     compileSdk = 33
 
+    buildFeatures {
+        viewBinding {
+            enable = true
+        }
+    }
+
+
     defaultConfig {
         applicationId = "com.example.resqtechaid_ignition_hacks_2023"
         minSdk = 24
