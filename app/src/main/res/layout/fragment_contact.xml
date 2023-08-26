@@ -63,6 +63,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="Name: Axel Moran Caballero\nEmail: amorancaballero@hotmail.com\nOccupation: Student\nUniversity: Concordia\nDegree: Computer Science\nPhone: 514-503-2046 "
@@ -80,8 +81,10 @@
         android:text="Name: Juba Laiche\nEmail: jubaales@gmail.com\nOccupation: Student\nUniversity: Concordia\nDegree: Computer Science\nPhone: 514-834-9680"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:layout_constraintVertical_bias="0.471" />
 
     <TextView
         android:id="@+id/textView4"
