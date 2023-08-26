@@ -1,7 +1,16 @@
 package com.example.resqtechaid_ignition_hacks_2023;
 
+import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -26,6 +35,8 @@ public class EmergencyFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     Button buttonLocation;
+
+    private static final int LOCATION_PERMISSION_CODE = 1;
 
     public EmergencyFragment() {
         // Required empty public constructor
@@ -68,7 +79,30 @@ public class EmergencyFragment extends Fragment {
         buttonLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Check for location permission
+                if (ContextCompat.checkSelfPermission(requireContext(),
+                        Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                    // Get user's current location
+                    LocationManager locationManager = (LocationManager) requireActivity().getSystemService(Context.LOCATION_SERVICE);
+                    Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
+                    if (location != null) {
+                        double latitude = location.getLatitude();
+                        double longitude = location.getLongitude();
+
+                        // Open Google Maps with nearest hospital location
+                        String uri = "http://maps.google.com/maps?q=nearest+hospital&loc:" + latitude + "," + longitude;
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(requireContext(), "Unable to get current location.", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    // Request location permission
+                    ActivityCompat.requestPermissions(requireActivity(),
+                            new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                            LOCATION_PERMISSION_CODE);
+                }
             }
         });
 
