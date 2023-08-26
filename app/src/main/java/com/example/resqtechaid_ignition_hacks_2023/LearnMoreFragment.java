@@ -1,28 +1,18 @@
 package com.example.resqtechaid_ignition_hacks_2023;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import androidx.fragment.app.Fragment;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link LearnMoreFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class LearnMoreFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -30,15 +20,6 @@ public class LearnMoreFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment LearnMoreFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static LearnMoreFragment newInstance(String param1, String param2) {
         LearnMoreFragment fragment = new LearnMoreFragment();
         Bundle args = new Bundle();
@@ -58,25 +39,84 @@ public class LearnMoreFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_learnmore, container, false);
     }
+
+    @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button btnLearnMore = view.findViewById(R.id.btnStrokeLearn);
-        final TextView combinedTextView = view.findViewById(R.id.LearnMoreStroke);
+        final TextView textStroke = view.findViewById(R.id.LearnMoreStroke);
+        final TextView textPoison = view.findViewById(R.id.LearnMoreFoodPoisoning);
+        final TextView textWound = view.findViewById(R.id.LearnMoreWound);
+        final TextView textConcussion = view.findViewById(R.id.LearnMoreConcussion);
+        final TextView textHeartAttack = view.findViewById(R.id.LearnMoreHeartAttack);
+        final TextView textAllergicReaction = view.findViewById(R.id.LearnMoreAllergicReaction);
 
-        btnLearnMore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (combinedTextView.getVisibility() == View.GONE) {
-                    combinedTextView.setVisibility(View.VISIBLE);
-                } else {
-                    combinedTextView.setVisibility(View.GONE);
-                }
+        Button strokeLearn = view.findViewById(R.id.btnStrokeLearn);
+        Button poisonLearn = view.findViewById(R.id.btnPoisonLearn);
+        Button woundLearn = view.findViewById(R.id.btnWounds);
+        Button concussionLearn = view.findViewById(R.id.btnConcussion);
+        Button heartAttackLearn = view.findViewById(R.id.btnHeartAttack);
+        Button allergicReactionLearn = view.findViewById(R.id.btnAllergic);
+
+        strokeLearn.setOnClickListener(v -> {
+            hideAllTextViews();
+            if (textStroke.getVisibility() == View.GONE) {
+                textStroke.setVisibility(View.VISIBLE);
             }
         });
-}}
+
+        poisonLearn.setOnClickListener(v -> {
+            hideAllTextViews();
+            if (textPoison.getVisibility() == View.GONE) {
+                textPoison.setVisibility(View.VISIBLE);
+            }
+        });
+
+        woundLearn.setOnClickListener(v -> {
+            hideAllTextViews();
+            if (textWound.getVisibility() == View.GONE) {
+                textWound.setVisibility(View.VISIBLE);
+            }
+        });
+
+        concussionLearn.setOnClickListener(v -> {
+            hideAllTextViews();
+            if (textConcussion.getVisibility() == View.GONE) {
+                textConcussion.setVisibility(View.VISIBLE);
+            }
+        });
+
+        heartAttackLearn.setOnClickListener(v -> {
+            hideAllTextViews();
+            if (textHeartAttack.getVisibility() == View.GONE) {
+                textHeartAttack.setVisibility(View.VISIBLE);
+            }
+        });
+
+        allergicReactionLearn.setOnClickListener(v -> {
+            hideAllTextViews();
+            if (textAllergicReaction.getVisibility() == View.GONE) {
+                textAllergicReaction.setVisibility(View.VISIBLE);
+            }
+        });
+    }
+
+    private void hideAllTextViews() {
+        TextView textStroke = getView().findViewById(R.id.LearnMoreStroke);
+        TextView textPoison = getView().findViewById(R.id.LearnMoreFoodPoisoning);
+        TextView textWound = getView().findViewById(R.id.LearnMoreWound);
+        TextView textConcussion = getView().findViewById(R.id.LearnMoreConcussion);
+        TextView textHeartAttack = getView().findViewById(R.id.LearnMoreHeartAttack);
+        TextView textAllergicReaction = getView().findViewById(R.id.LearnMoreAllergicReaction);
+
+        textStroke.setVisibility(View.GONE);
+        textPoison.setVisibility(View.GONE);
+        textWound.setVisibility(View.GONE);
+        textConcussion.setVisibility(View.GONE);
+        textHeartAttack.setVisibility(View.GONE);
+        textAllergicReaction.setVisibility(View.GONE);
+    }
+}
