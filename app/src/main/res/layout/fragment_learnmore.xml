@@ -95,11 +95,11 @@
         app:layout_constraintGuide_begin="128dp" />
 
     <androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guideline21"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintGuide_begin="656dp" />
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="619dp" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -135,6 +135,7 @@
         android:id="@+id/LearnMoreStroke"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="Stroke Information:\nA stroke occurs when the blood supply to part of your brain is interrupted or reduced, depriving brain tissue of oxygen and nutrients. It can result in serious brain damage or even death. There are two main types of stroke:\n1. Ischemic Stroke: Caused by a blockage in an artery that supplies blood to the brain.\n2. Hemorrhagic Stroke: Caused by bleeding in the brain due to a burst blood vessel.\n\nFirst Aid Instructions:\nIf you suspect someone is having a stroke, follow these steps:\n1. Call for Emergency Help: Dial your local emergency number (e.g., 911) immediately.\n2. Stay Calm: Keep the person calm and comfortable.\n3. Do NOT Give Anything to Eat or Drink: The person should not eat or drink anything.\n4. Note the Time: Record the time when symptoms started.\n5. Keep the Person Still: Avoid unnecessary movements."
         android:textSize="14sp"
         android:visibility="gone"
@@ -148,6 +149,7 @@
         android:id="@+id/LearnMoreFoodPoisoning"
         android:layout_width="0dp"
         android:layout_height="426dp"
+        android:layout_marginStart="16dp"
         android:text="Food Poisoning Information:\nFood poisoning, also known as foodborne illness, is caused by consuming contaminated food. It can result from bacteria, viruses, or parasites that contaminate food, or from chemicals or toxins in the food. Common symptoms include nausea, vomiting, diarrhea, and stomach cramps. Most food poisoning cases resolve on their own, but some can be more serious.\n\nFirst Aid Instructions:\nIf you suspect someone has food poisoning, follow these steps:\n1. Stay Hydrated: Encourage the person to sip water or other clear fluids to prevent dehydration.\n2. Rest: The person should rest and avoid strenuous activity.\n3. Avoid Certain Foods: Keep away from dairy, caffeine, and highly seasoned or fatty foods until symptoms subside.\n4. Seek Medical Help: If symptoms are severe, persist for more than 3 days, or if the person is at high risk (like children or elderly), seek medical attention.\n5. Prevent Spread: Ensure proper hand hygiene to prevent the spread to others."
         android:textSize="14sp"
         android:visibility="gone"
@@ -161,6 +163,7 @@
         android:id="@+id/LearnMoreWound"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="Wound Information:\nA wound is a type of injury in which skin is torn, cut, or punctured. Wounds can be superficial or deep, and can be caused by various means such as a sharp object, fall, or burn. Wounds can be classified as open (broken skin) or closed (skin not broken, like bruises).\n\nFirst Aid Instructions:\n1. Clean the Wound: Gently wash it with soap and water.\n2. Stop the Bleeding: Apply gentle pressure with a clean cloth or bandage.\n3. Apply an Antibiotic: If available, this can prevent or treat an infection.\n4. Cover the Wound: Use a bandage or gauze to protect it from dirt and bacteria.\n5. Seek Medical Help: If the wound is deep, won't stop bleeding, or shows signs of infection."
         android:textSize="14sp"
         android:visibility="gone"
@@ -173,6 +176,7 @@
         android:id="@+id/LearnMoreConcussion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="Concussion Information:\nA concussion is a type of traumatic brain injury caused by a bump, blow, or jolt to the head or a hit to the body that causes the head and brain to move rapidly back and forth. It can lead to temporary loss of brain function.\n\nFirst Aid Instructions:\n1. Ensure Safety: Remove the person from any further potential harm.\n2. Monitor Consciousness: If the person is unconscious, seek medical attention immediately.\n3. Avoid Sudden Movements: Don't move the person unless necessary.\n4. Look for Symptoms: Such as confusion, difficulty speaking, dizziness, or nausea.\n5. Seek Medical Help: Even if symptoms are mild, it's crucial to have a healthcare professional evaluate."
         android:textSize="14sp"
         android:visibility="gone"
@@ -185,6 +189,7 @@
         android:id="@+id/LearnMoreHeartAttack"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="Heart Attack Information:\nA heart attack happens when blood flow to a part of the heart muscle becomes blocked. Without oxygen-rich blood, the heart muscle begins to die.\n\nFirst Aid Instructions:\n1. Call for Emergency Help: Dial your local emergency number immediately.\n2. Keep the Person Calm: Make them sit down and try to keep them relaxed.\n3. Offer Aspirin: Only if the person is not allergic and it's recommended by a professional.\n4. Begin CPR: If the person becomes unconscious and shows no signs of circulation.\n5. Stay with the Person: Until medical help arrives."
         android:textSize="14sp"
         android:visibility="gone"
@@ -197,6 +202,7 @@
         android:id="@+id/LearnMoreAllergicReaction"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="Allergic Reaction Information:\nAn allergic reaction occurs when the immune system reacts to a foreign substance such as pollen, bee venom, or a particular food. Symptoms can range from mild itching or swelling to severe anaphylactic reactions.\n\nFirst Aid Instructions:\n1. Ask About Allergy Medication: Some people carry epinephrine for emergencies.\n2. Call for Emergency Help: If the reaction is severe or the person has trouble breathing.\n3. Lay the Person Down: Elevate their legs unless it makes breathing more difficult.\n4. Administer Epinephrine: Only if the person is unable and has a prescription.\n5. Stay with the Person: Monitor symptoms and ensure they don't worsen."
         android:textSize="14sp"
         android:visibility="gone"
