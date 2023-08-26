@@ -363,7 +363,7 @@
         app:layout_constraintGuide_begin="632dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttoncredit"
         android:layout_width="92dp"
         android:layout_height="51dp"
         android:text="GO TO"
