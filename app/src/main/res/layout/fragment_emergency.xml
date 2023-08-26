@@ -19,44 +19,34 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/cprProcedureTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="CPR Procedure:"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerTextView" />
-
-    <TextView
         android:id="@+id/cprStepsTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="359dp"
+        android:layout_height="235dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="176dp"
         android:text=" 1. Check for responsiveness: Tap the person and shout, Are you okay?\n2. Call for help: Dial emergency services (e.g., 911) for assistance.\n3. Start chest compressions: Place the heel of one hand on the center of the person's chest, interlock your fingers, and compress hard and fast at least 2 inches deep.\n4. Give rescue breaths: After 30 compressions, give 2 rescue breaths by tilting the head back, lifting the chin, and sealing your mouth over the person's mouth to deliver breaths.\n5. Continue cycles: Keep performing cycles of compressions and rescue breaths until help arrives or the person starts breathing."
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cprProcedureTextView" />
+        app:layout_constraintTop_toTopOf="@+id/guideline26" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.84" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="12dp"
         android:text="Find the nearest hospital"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
@@ -71,6 +61,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/btnCprProcedure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="CPR Procedure"
+        app:layout_constraintBottom_toTopOf="@+id/guideline26"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerTextView"
+        app:layout_constraintVertical_bias="0.277" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="402dp"
+        android:layout_height="144dp"
+        android:layout_below="@id/btnCprProcedure"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cprStepsTextView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="119dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
