@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,163 +6,79 @@
     android:layout_height="match_parent"
     tools:context=".LearnMoreFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/relativeLayout"
+    <TextView
+        android:id="@+id/LearnMoreStroke"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/headerTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Learn More"
-            android:textSize="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/strokeInfoTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:text="Stroke Information:"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/headerTextView" />
-
-        <TextView
-            android:id="@+id/strokeDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="A stroke occurs when the blood supply to part of your brain is interrupted or reduced, depriving brain tissue of oxygen and nutrients. It can result in serious brain damage or even death. There are two main types of stroke:"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/strokeInfoTextView" />
-
-        <TextView
-            android:id="@+id/ischemicStroke"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="1. Ischemic Stroke: Caused by a blockage in an artery that supplies blood to the brain."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/strokeDescription" />
-
-        <TextView
-            android:id="@+id/hemorrhagicStroke"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="2. Hemorrhagic Stroke: Caused by bleeding in the brain due to a burst blood vessel."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ischemicStroke" />
-
-        <TextView
-            android:id="@+id/firstAidTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hemorrhagicStroke"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:text="First Aid Instructions:"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hemorrhagicStroke" />
-
-        <TextView
-            android:id="@+id/suspectingAid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="If you suspect someone is having a stroke, follow these steps:"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/firstAidTextView" />
-
-        <TextView
-            android:id="@+id/firstStepAid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/suspectingAid"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="1. Call for Emergency Help: Dial your local emergency number (e.g., 911) immediately."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/suspectingAid" />
-
-        <TextView
-            android:id="@+id/secondStepAid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/firstStepAid"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="2. Stay Calm: Keep the person calm and comfortable."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/firstStepAid" />
-
-        <TextView
-            android:id="@+id/thirdStepAid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/secondStepAid"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="3. Do NOT Give Anything to Eat or Drink: The person should not eat or drink anything."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/secondStepAid" />
-
-        <TextView
-            android:id="@+id/fourthStepAid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/thirdStepAid"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="4. Note the Time: Record the time when symptoms started."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/thirdStepAid" />
-
-        <TextView
-            android:id="@+id/fifthStepAid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/fourthStepAid"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="5. Keep the Person Still: Avoid unnecessary movements."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fourthStepAid" />
+        android:layout_height="wrap_content"
+        android:text="Learn More\n\nStroke Information:\nA stroke occurs when the blood supply to part of your brain is interrupted or reduced, depriving brain tissue of oxygen and nutrients. It can result in serious brain damage or even death. There are two main types of stroke:\n1. Ischemic Stroke: Caused by a blockage in an artery that supplies blood to the brain.\n2. Hemorrhagic Stroke: Caused by bleeding in the brain due to a burst blood vessel.\n\nFirst Aid Instructions:\nIf you suspect someone is having a stroke, follow these steps:\n1. Call for Emergency Help: Dial your local emergency number (e.g., 911) immediately.\n2. Stay Calm: Keep the person calm and comfortable.\n3. Do NOT Give Anything to Eat or Drink: The person should not eat or drink anything.\n4. Note the Time: Record the time when symptoms started.\n5. Keep the Person Still: Avoid unnecessary movements."
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline19"
+        app:layout_constraintVertical_bias="0.206"
+        tools:visibility="gone" />
+    <TextView
+        android:id="@+id/LearnMoreFoodPoisoning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Learn More\n\nFood Poisoning Information:\nFood poisoning, also known as foodborne illness, is caused by consuming contaminated food. It can result from bacteria, viruses, or parasites that contaminate food, or from chemicals or toxins in the food. Common symptoms include nausea, vomiting, diarrhea, and stomach cramps. Most food poisoning cases resolve on their own, but some can be more serious.\n\nFirst Aid Instructions:\nIf you suspect someone has food poisoning, follow these steps:\n1. Stay Hydrated: Encourage the person to sip water or other clear fluids to prevent dehydration.\n2. Rest: The person should rest and avoid strenuous activity.\n3. Avoid Certain Foods: Keep away from dairy, caffeine, and highly seasoned or fatty foods until symptoms subside.\n4. Seek Medical Help: If symptoms are severe, persist for more than 3 days, or if the person is at high risk (like children or elderly), seek medical attention.\n5. Prevent Spread: Ensure proper hand hygiene to prevent the spread to others."
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnStrokeLearn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn More about Strokes"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
+        app:layout_constraintEnd_toStartOf="@+id/guideline20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="78dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="244dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="571dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn more about Poisoning"
+        app:layout_constraintBottom_toTopOf="@+id/guideline22"
+        app:layout_constraintEnd_toStartOf="@+id/guideline20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline19" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="156dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

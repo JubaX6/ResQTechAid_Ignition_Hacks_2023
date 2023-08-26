@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,4 +63,20 @@ public class LearnMoreFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_learnmore, container, false);
     }
-}
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        Button btnLearnMore = view.findViewById(R.id.btnStrokeLearn);
+        final TextView combinedTextView = view.findViewById(R.id.LearnMoreStroke);
+
+        btnLearnMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (combinedTextView.getVisibility() == View.GONE) {
+                    combinedTextView.setVisibility(View.VISIBLE);
+                } else {
+                    combinedTextView.setVisibility(View.GONE);
+                }
+            }
+        });
+}}
