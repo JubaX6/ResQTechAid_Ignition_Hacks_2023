@@ -94,7 +94,7 @@ public class EmergencyFragment extends Fragment {
         btnCprProcedure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.youtube.com/watch?v=pxDWQlRFBSE&ab_channel=RushUniversitySystemforHealth");
+                Uri uri = Uri.parse("android.resource://" + requireContext().getPackageName() + "/" + R.raw.cprvideo);
                 videoView.setMediaController(mediaController);
                 videoView.setVideoURI(uri);
                 videoView.requestFocus();
