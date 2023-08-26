@@ -3,7 +3,9 @@ package com.example.resqtechaid_ignition_hacks_2023;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -14,8 +16,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SeekBar;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -38,6 +46,8 @@ public class SettingsFragment extends Fragment {
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
+    FloatingActionButton floatingActionButtonLanguages;
+    SeekBar seekBarBrightness;
 
     public SettingsFragment() {
         // Required empty public constructor
@@ -78,6 +88,9 @@ public class SettingsFragment extends Fragment {
 
         nightModeSwitch = rootView.findViewById(R.id.switchNightMode);
         notificationsSwitch = rootView.findViewById(R.id.switchNotifications);
+        floatingActionButtonLanguages = rootView.findViewById(R.id.floatingActionButtonLanguages);
+
+
 
         notificationsSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
@@ -166,4 +179,8 @@ public class SettingsFragment extends Fragment {
         NotificationManager notificationManager = (NotificationManager) requireContext().getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.cancel(notificationId);
     }
+
+
+
+
 }
