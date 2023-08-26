@@ -10,10 +10,13 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -38,6 +41,8 @@ public class SettingsFragment extends Fragment {
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
+
+    private Button buttoncredit;
 
     public SettingsFragment() {
         // Required empty public constructor
@@ -78,6 +83,15 @@ public class SettingsFragment extends Fragment {
 
         nightModeSwitch = rootView.findViewById(R.id.switchNightMode);
         notificationsSwitch = rootView.findViewById(R.id.switchNotifications);
+
+        buttoncredit = rootView.findViewById(R.id.buttoncredit);
+
+        buttoncredit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                replaceFragment(new CreditFragment());
+            }
+        });
 
         notificationsSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
@@ -165,5 +179,13 @@ public class SettingsFragment extends Fragment {
         int notificationId = 1;
         NotificationManager notificationManager = (NotificationManager) requireContext().getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.cancel(notificationId);
+    }
+
+    private void replaceFragment(Fragment fragment) {
+
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().addToBackStack(null);
+        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.commit();
     }
 }
